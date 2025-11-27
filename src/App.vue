@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div class="editor-pane">
-      <div class="pane-header">配置输入 (Input)</div>
+      <div class="pane-header">配置输入</div>
       <textarea
         v-model="content"
         class="source-editor"
@@ -11,7 +11,7 @@
     </div>
 
     <div class="preview-pane">
-      <div class="pane-header">预览 - 模拟ruijie终端</div>
+      <div class="pane-header">模拟 Ruijie 终端</div>
       <div class="terminal-screen">
         <pre
           class="terminal-content">{{ content }}<span class="cursor">_</span></pre>
@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" vapor>
 import { ref } from "vue";
 
 // 默认初始内容
@@ -41,10 +41,10 @@ Ruijie(config)#`);
 <style scoped>
 .layout {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
   background-color: #333;
-  font-family: sans-serif;
   overflow: hidden;
 }
 
